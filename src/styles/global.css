@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@theme {
+    /* Web Colors */
+    --color-theme-pearl-bush: #E0E1DD;
+    --color-theme-pearl-blue: #778DA9;
+    --color-theme-dusk: #415A77;
+    --color-theme-dark: #1B263B;
+    --color-theme-mirage: #0D1B2A;
+}
+
+@layer base {
+    /* Disable overscroll behavior */
+    html,
+    body {
+        overscroll-behavior: none;
+        overscroll-behavior-y: none;
+    }
+
+}
