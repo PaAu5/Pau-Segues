@@ -1,5 +1,12 @@
 ---
+import { SOCIAL } from "@/consts/social"
 ---
-<section>
-
+<section class="flex flex-row items-center justify-center">
+    {
+        SOCIAL.map(({url, image}) => 
+            <a href={url}>
+                <image.logo />
+            </a>
+        )
+    }
 </section>
