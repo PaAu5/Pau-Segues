@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('general-sans.css');
 
 @theme {
     /* Web Colors */
@@ -16,5 +17,4 @@
         overscroll-behavior: none;
         overscroll-behavior-y: none;
     }
-
 }
