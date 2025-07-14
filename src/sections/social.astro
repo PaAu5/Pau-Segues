@@ -1,12 +1,19 @@
 ---
 import { SOCIAL } from "@/consts/social"
 ---
-<section class="flex flex-row items-center justify-center">
-    {
-        SOCIAL.map(({url, image}) => 
-            <a href={url}>
-                <image.logo />
-            </a>
-        )
-    }
+<section class="flex flex-col justify-center items-center">
+    <div class="mb-1">
+        <h2 class="text-2xl">
+            Social Media
+        </h2>
+    </div>
+    <div class="flex flex-row items-center">
+        {
+            SOCIAL.map(({url, image}) => 
+                <a href={url}>
+                    <image.logo />
+                </a>
+            )
+        }
+    </div>
 </section>
