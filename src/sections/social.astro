@@ -10,7 +10,7 @@ import { SOCIAL } from "@/consts/social"
     <div class="flex flex-row items-center">
         {
             SOCIAL.map(({url, image}) => 
-                <a href={url} target="_blank" class="hover:scale-110">
+                <a href={url} target="_blank" class="hover:scale-110 transition-transform">
                     <image.logo/>
                 </a>
             )
