@@ -1,0 +1,12 @@
+---
+import SocialMediaCard from "@/components/social-media-card.astro";
+
+import { SOCIAL } from "@/consts/social";
+---
+<section class="flex flex-col justify-center items-center space-y-4 my-10">
+    {
+        SOCIAL.map(({id}) => 
+                <SocialMediaCard id={id}/>
+            )
+    }
+</section>

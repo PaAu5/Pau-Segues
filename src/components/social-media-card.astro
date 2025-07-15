@@ -1,0 +1,21 @@
+---
+import { SOCIAL } from "@/consts/social";
+
+import Button001 from "@/components/button-001.astro"
+
+const { id } = Astro.props
+const social = SOCIAL.find((item) => item.id === id)
+---
+{social ? (
+  <div class="flex flex-col justify-between h-[100px] w-[450px] bg-[color:var(--color-theme-dusk)] text-[color:var(--color-theme-pearl-bush)]">
+    <div class="flex flex-row items-center justify-center space-x-2 pt-2">
+        <social.image.logo/>
+        <p class="text-2xl">{ social.user }</p>
+    </div>
+    <div class="flex justify-center pb-2">
+        <Button001 href={social.url} text={`Follow me on ${social.name}!`}/>
+    </div>
+  </div>
+) : (
+  <p>Red social no encontrada: {id}</p>
+)}

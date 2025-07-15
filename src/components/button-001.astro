@@ -1,0 +1,14 @@
+---
+interface Props  {
+    href: string;
+	text: string;
+}
+
+const { href, text } = Astro.props ;
+---
+<a href={href}
+    class="border-[color:var(--color-theme-pearl-bush)] border-2 px-10 py-1 text-md font-bold 
+    inline-block skew-x-[-21deg] transition duration-500 ease-fade-out 
+    hover:scale-105 hover:bg-[color:var(--color-theme-pearl-bush)] rounded-lg text-[color:var(--color-theme-mirage)]">
+    <span class="inline-block skew-x-[21deg]">{text}</span>
+</a>

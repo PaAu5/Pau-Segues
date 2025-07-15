@@ -6,6 +6,7 @@ export interface Social {
     id: SocialId;
     name: SocialName;
     url: string;
+    user: string;
     image: {
         logo: any;
         width: number;

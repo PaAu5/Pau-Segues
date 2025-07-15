@@ -10,6 +10,7 @@ export const SOCIAL: Social[] = [
         id: "x",
         name: "X",
         url: "https://x.com/pau_segues",
+        user: "@pau_segues",
         image: {
             logo: X,
             width: 200,
@@ -20,6 +21,7 @@ export const SOCIAL: Social[] = [
         id: "instagram",
         name: "Instagram",
         url: "https://www.instagram.com/pau_segues/",
+        user: "@pau_segues",
         image: {
             logo: Instagram,
             width: 200,
@@ -30,6 +32,7 @@ export const SOCIAL: Social[] = [
         id: "github",
         name: "GitHub",
         url: "https://github.com/PaAu5",
+        user: "@PaAu5",
         image: {
             logo: GitHub,
             width: 200,
