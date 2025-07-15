@@ -2,6 +2,10 @@
 @import url('general-sans.css');
 
 @theme {
+    --font-fallback: 'Adjusted Arial Fallback', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI',
+    'Noto Sans', helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    --font-primary: 'GeneralSans';
+
     /* Web Colors */
     --color-theme-pearl-bush: #E0E1DD;
     --color-theme-pearl-blue: #778DA9;
@@ -17,4 +21,21 @@
         overscroll-behavior: none;
         overscroll-behavior-y: none;
     }
+}
+
+
+@font-face {
+  font-family: 'Adjusted Arial Fallback';
+  src: local(Arial);
+  size-adjust: 112%;
+  ascent-override: 74%;
+  descent-override: normal;
+  line-gap-override: normal;
+}
+
+html {
+    font-family: 'GeneralSans', var(--font-fallback);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
