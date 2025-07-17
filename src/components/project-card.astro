@@ -12,7 +12,7 @@ interface Props  {
 const { title, text, url, image } = Astro.props
 ---
 
-<a href={url} class="hover:scale-105 transition relative inline-block w-[400px] h-auto">
+<a href={url} class="hover:scale-105 transition duration-300 relative inline-block w-[400px] h-auto">
     <div class="absolute inset-0 flex flex-col justify-center items-center z-10">
         <div class="bg-[color:var(--color-theme-pearl-bush)] text-center shadow-personalized space-y-2 py-4 px-4 mx-12 rounded-lg">
             <p class="font-bold text-lg">
