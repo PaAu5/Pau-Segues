@@ -1,25 +1,27 @@
 ---
 import { SOCIAL } from '@/consts/social'
 ---
-<header class="bg-[color:var(--color-theme-dusk)] text-[color:var(--color-theme-pearl-bush)] shadow-personalized flex justify-between">
-    <nav class="flex flex-row justify-start space-x-4 pl-12">
-        <a class="hover:scale-125 transition duration-500 py-4 px-6 text-lg" href="#about">
-            About Me
-        </a>
-        <a class="hover:scale-125 transition duration-500 py-4 px-6 text-lg" href="#projects">
-            Projects
-        </a>
-        <a class="hover:scale-125 transition duration-500 py-4 px-6 text-lg" href="contact">
-            Contact
-        </a>
-    </nav>
-    <nav class="flex flex-row justify-end items-center space-x-4 pr-12">
-        {
-            SOCIAL.map(({url, image}) => 
-                <a href={url} target="_blank" class="hover:scale-125 transition duration-500">
-                    <image.logo/>
-                </a>
-            )
-        }
-    </nav>
+<header class="bg-[color:var(--color-theme-dusk)] text-[color:var(--color-theme-pearl-bush)] shadow-personalized py-4">
+    <div class="flex flex-col sm:flex-row md:justify-between items-center gap-4 sm:gap-0">
+        <nav class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-2 sm:gap-4 w-full md:ml-12">
+            <a class="hover:scale-125 transition duration-500 py-4 px-6 text-xl" href="#about">
+                About Me
+            </a>
+            <a class="hover:scale-125 transition duration-500 py-4 px-6 text-xl" href="#projects">
+                Projects
+            </a>
+            <a class="hover:scale-125 transition duration-500 py-4 px-6 text-xl" href="contact">
+                Contact
+            </a> 
+        </nav>
+        <nav class="flex justify-center items-center gap-4 w-full sm:w-auto md:mr-18">
+            {
+                SOCIAL.map(({url, image}) => 
+                    <a href={url} target="_blank" class="hover:scale-125 transition duration-500">
+                        <image.logo/>
+                    </a>
+                )
+            }
+        </nav>
+    </div>
 </header>
