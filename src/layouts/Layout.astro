@@ -1,9 +1,10 @@
 ---
 interface Props  {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props ;
+const { title, description } = Astro.props ;
 
 import Footer from "@/sections/footer.astro"
 import Header from "@/sections/header.astro";
@@ -16,7 +17,28 @@ import "@/styles/global.css";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		
+		<!-- METATAGS -->
+		<!-- TITLE AND DESCRIPTION -->
 		<title>{title}</title>
+		<meta name="description" content={description} />
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://pausegues.netlify.app/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
+		<meta property="og:image" content="https://pausegues.netlify.app/og.jpg">
+		<meta property="og:locale" content="en_EN" />
+		<meta property="og:site_name" content="Pau Segués Vitutia" />
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+   		<meta name="twitter:site" content="@pau_segues" />
+   		<meta name="twitter:creator" content="@pau_segues" />
+		<meta name="twitter:title" content={title}>
+		<meta name="twitter:description" content={description}>
+		<meta name="twitter:image" content="https://pausegues.netlify.app/og.jpg">
 
 		<!-- FAVICONS -->
 		<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
